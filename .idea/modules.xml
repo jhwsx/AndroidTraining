@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" filepath="$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" filepath="$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" filepath="$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" />
     </modules>
   </component>
 </project>

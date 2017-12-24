@@ -1,2 +1,4 @@
-include ':app', ':t2_sceneandtransitionsdemo'
+include ':app'
 include ':t1_displaybitmapdemo'
+include ':t2_sceneandtransitionsdemo'
+include ':t3_add_animations'

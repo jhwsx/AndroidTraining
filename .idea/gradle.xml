@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/t1_displaybitmapdemo" />
             <option value="$PROJECT_DIR$/t2_sceneandtransitionsdemo" />
+            <option value="$PROJECT_DIR$/t3_add_animations" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
