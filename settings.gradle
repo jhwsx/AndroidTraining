@@ -1,0 +1,2 @@
+include ':app', ':t2_sceneandtransitionsdemo'
+include ':t1_displaybitmapdemo'
