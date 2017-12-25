@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.t3_add_animations.screenslide.ScreenSlideActivity;
+
 public class MainActivity extends ListActivity {
 
     private Element[] mElements;

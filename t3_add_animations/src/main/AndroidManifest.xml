@@ -28,7 +28,7 @@
             android:parentActivityName=".MainActivity"/>
 
         <activity
-            android:name=".ScreenSlideActivity"
+            android:name=".screenslide.ScreenSlideActivity"
             android:label="@string/text_screen_slide"
             android:parentActivityName=".MainActivity"/>
 

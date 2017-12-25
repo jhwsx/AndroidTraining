@@ -1,4 +1,4 @@
-package com.example.t3_add_animations;
+package com.example.t3_add_animations.screenslide;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,8 +7,12 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.t3_add_animations.R;
 
 /**
  * Created by wzc on 2017/12/24.
@@ -26,6 +30,7 @@ public class ScreenSlideActivity extends FragmentActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_slide);
         mViewPager = (ViewPager) findViewById(R.id.pager);
+
         mViewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         mPre = (TextView) findViewById(R.id.tv_pre);
         mNext = (TextView) findViewById(R.id.tv_next);
@@ -77,5 +82,31 @@ public class ScreenSlideActivity extends FragmentActivity implements View.OnClic
         public int getCount() {
             return NUM_PAGES;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_screen_slide,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_normal:
+                mViewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
+                    @Override
+                    public void transformPage(View page, float position) {
+                    }
+                });
+                return true;
+            case R.id.action_zoomout:
+                mViewPager.setPageTransformer(true,new ZoomoutPageTransformer());
+                return true;
+            case R.id.action_depth:
+                mViewPager.setPageTransformer(true, new DepthPageTransformer());
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
