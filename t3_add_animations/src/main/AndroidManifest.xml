@@ -9,13 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="Animations Demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SimpleCrossfadeActivity"
+            android:label="@string/text_simple_crossfade"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".CardFlipActivity"
+            android:label="@string/text_cardflip"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".ScreenSlideActivity"
+            android:label="@string/text_screen_slide"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".ZoomActivity"
+            android:label="@string/text_zoom"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".LayoutChangesActivity"
+            android:label="@string/text_layout_changes"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
