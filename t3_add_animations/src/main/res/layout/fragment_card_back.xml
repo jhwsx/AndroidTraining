@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#a6c"
+              android:gravity="bottom"
+              android:orientation="vertical"
+              android:padding="16dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:text="Study Android"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="?android:textAppearanceSmall"
+        android:textColor="#80ffffff"
+        android:textAllCaps="false"
+        android:text="Just read the fucking code"
+        android:lineSpacingMultiplier="1.2"/>
+</LinearLayout>

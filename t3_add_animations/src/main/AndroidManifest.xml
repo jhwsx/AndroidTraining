@@ -23,7 +23,7 @@
             android:parentActivityName=".MainActivity"/>
 
         <activity
-            android:name=".CardFlipActivity"
+            android:name=".cardflip.CardFlipActivity"
             android:label="@string/text_cardflip"
             android:parentActivityName=".MainActivity"/>
 
@@ -33,7 +33,7 @@
             android:parentActivityName=".MainActivity"/>
 
         <activity
-            android:name=".ZoomActivity"
+            android:name=".zoom.ZoomActivity"
             android:label="@string/text_zoom"
             android:parentActivityName=".MainActivity"/>
 

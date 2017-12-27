@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:divider="?android:dividerHorizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:showDividers="middle"
+            android:id="@+id/container"
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView android:id="@android:id/empty"
+              style="?android:textAppearanceSmall"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:padding="32dp"
+              android:text="@string/message_empty_layout_changes"
+              android:textColor="?android:textColorSecondary" />
+</FrameLayout>

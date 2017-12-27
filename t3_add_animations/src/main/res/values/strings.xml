@@ -12,4 +12,17 @@
         \nNow, the VOA Learning English program Words and Their Stories.On this show, we explore the origins and usage of common expressions in American English. Sometimes we tie the show to an event or special time of the year. This show could be tied to any time of the year that features a holiday.Holidays are a wonderful time of the year! They are a time when people slow down and take a break from their daily lives.In the village of Vosava, Belarus, men prepare a horse and a sleigh to celebrate the New Year on January 13 according to the Julian calendar, 2017.In the village of Vosava, Belarus, men prepare a horse and a sleigh to celebrate the New Year on January 13 according to the Julian calendar, 2017.While holidays are celebrated in different ways, many have something in common — gift-giving!And who doesn\'t like to get a present. Covered in pretty paper, maybe tied with a bow or ribbon, a wrapped gift is a surprise. It could be anything!"Oh, you really shouldn't have!" is a common response when someone hands you a gift. We say this even when we are thinking to ourselves, "Yay! I got a present!"Sometimes the gift is perfect.Now, the VOA Learning English program Words and Their Stories.On this show, we explore the origins and usage of common expressions in American English. Sometimes we tie the show to an event or special time of the year. This show could be tied to any time of the year that features a holiday.Holidays are a wonderful time of the year! They are a time when people slow down and take a break from their daily lives.In the village of Vosava, Belarus, men prepare a horse and a sleigh to celebrate the New Year on January 13 according to the Julian calendar, 2017.In the village of Vosava, Belarus, men prepare a horse and a sleigh to celebrate the New Year on January 13 according to the Julian calendar, 2017.While holidays are celebrated in different ways, many have something in common — gift-giving!And who doesn\'t like to get a present. Covered in pretty paper, maybe tied with a bow or ribbon, a wrapped gift is a surprise. It could be anything!"Oh, you really shouldn't have!" is a common response when someone hands you a gift. We say this even when we are thinking to ourselves, "Yay! I got a present!"Sometimes the gift is perfect.
     ]]></string>
     <string name="text_toggle_indicator">Toggle Indicator</string>
+    <string name="pic">pic</string>
+    <string name="action_photo">photo</string>
+    <string name="action_info">info</string>
+
+    <!-- Accessibility-only descriptions -->
+    <string name="description_image_1">Image 1</string>
+    <string name="description_image_2">Image 2</string>
+    <string name="description_zoom_touch_close">Expanded image (touch to close)</string>
+
+    <string name="message_empty_layout_changes">Add an item above to get started.</string>
+
+    <string name="action_add_item">Add item</string>
+    <string name="action_remove_item">Remove item</string>
 </resources>

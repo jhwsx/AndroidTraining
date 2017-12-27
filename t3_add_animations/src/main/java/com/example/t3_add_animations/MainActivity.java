@@ -8,30 +8,34 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.t3_add_animations.cardflip.CardFlipActivity;
 import com.example.t3_add_animations.screenslide.ScreenSlideActivity;
+import com.example.t3_add_animations.zoom.ZoomActivity;
 
 public class MainActivity extends ListActivity {
 
     private Element[] mElements;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mElements = new Element[] {
-                new Element(R.string.text_simple_crossfade,SimpleCrossfadeActivity.class),
-                new Element(R.string.text_cardflip,CardFlipActivity.class),
-                new Element(R.string.text_screen_slide,ScreenSlideActivity.class),
-                new Element(R.string.text_layout_changes,LayoutChangesActivity.class),
+        mElements = new Element[]{
+                new Element(R.string.text_simple_crossfade, SimpleCrossfadeActivity.class),
+                new Element(R.string.text_cardflip, CardFlipActivity.class),
+                new Element(R.string.text_screen_slide, ScreenSlideActivity.class),
+                new Element(R.string.text_zoom, ZoomActivity.class),
+                new Element(R.string.text_layout_changes, LayoutChangesActivity.class),
 
         };
-        setListAdapter(new ArrayAdapter<Element>(this,android.R.layout.simple_list_item_1,android.R.id.text1,mElements));
+        setListAdapter(new ArrayAdapter<Element>(this, android.R.layout.simple_list_item_1, android.R.id.text1, mElements));
     }
 
     private class Element {
         private Class<? extends Activity> mClass;
         private String mTitle;
 
-        public Element( int resId,Class<? extends Activity> aClass) {
+        public Element(int resId, Class<? extends Activity> aClass) {
             mClass = aClass;
             mTitle = getResources().getString(resId);
         }
