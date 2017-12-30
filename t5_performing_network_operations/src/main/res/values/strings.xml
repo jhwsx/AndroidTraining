@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">t5_performing_network_operations</string>
+    <string name="fetch">Fetch</string>
+    <string name="clear">Clear</string>
+</resources>

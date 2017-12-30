@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabelView">
+
+        <attr name="label_background_color" format="color"/>
+        <attr name="label_text_color" format="color"/>
+        <attr name="label_text" format="string"/>
+        <attr name="label_text_size" format="dimension"/>
+
+        <attr name="label_top_margin" format="dimension"/>
+        <attr name="label_top_padding" format="dimension"/>
+        <attr name="label_bottom_padding" format="dimension"/>
+
+
+        <attr name="label_text_style">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+            <enum name="bold" value="2"/>
+        </attr>
+
+        <attr name="label_direction">
+            <enum name="leftTop" value="-45"/>
+            <enum name="rightTop" value="45"/>
+        </attr>
+
+
+    </declare-styleable>
+</resources>
