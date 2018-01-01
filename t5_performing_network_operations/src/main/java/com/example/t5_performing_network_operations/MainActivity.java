@@ -43,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements DownloadCallback 
                 mTextView.setText("");
                 mDownloadFragment.cancelDownload();
                 return true;
+            case R.id.action_settings:
+                SettingsActivity.start(MainActivity.this);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

@@ -9,4 +9,9 @@
         android:id="@+id/action_clear_data"
         android:title="@string/clear"
         app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom"/>
 </menu>
