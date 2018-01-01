@@ -6,6 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="preferenceTheme">@style/PreferenceThemeOverlay</item>-->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="alertDialogTheme">@style/AppAlertDialog</item>
+    </style>
+    
+    <style name="AppAlertDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppAlertDialogContent"
+           parent="Theme.AppCompat.DayNight">
+        <!-- To keep the color of EditText -->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
 </resources>

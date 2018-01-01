@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" filepath="$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" filepath="$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" filepath="$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t4_test_apps/t4_test_apps.iml" filepath="$PROJECT_DIR$/t4_test_apps/t4_test_apps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t5_performing_network_operations/t5_performing_network_operations.iml" filepath="$PROJECT_DIR$/t5_performing_network_operations/t5_performing_network_operations.iml" />
     </modules>
   </component>
 </project>
