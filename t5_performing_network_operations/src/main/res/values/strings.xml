@@ -2,4 +2,7 @@
     <string name="app_name">t5_performing_network_operations</string>
     <string name="fetch">Fetch</string>
     <string name="clear">Clear</string>
+    <string name="settings">Settings</string>
+    <string name="pref_sync">pref_sync</string>
+    <string name="pref_sync_summary">pref_sync_summary</string>
 </resources>
