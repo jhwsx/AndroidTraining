@@ -12,6 +12,8 @@
     </style>
     
     <style name="AppAlertDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <!--dialog主题使用 DayNight.Dialog.Alert theme提供给的默认浅绿色覆盖了Acivity主题中设置的colorAccent,
+        这里覆写是为了再用想要的颜色-->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
