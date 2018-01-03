@@ -4,23 +4,30 @@
     <android.support.v7.preference.PreferenceCategory
         android:title="Category 1">
         <android.support.v7.preference.SwitchPreferenceCompat
+            android:defaultValue="true"
             android:key="key1"
-            android:title="Switch Preference"
             android:summary="Switch Summary"
-            android:defaultValue="true"/>
+            android:title="Switch Preference"/>
 
         <android.support.v7.preference.EditTextPreference
-            android:key="key2"
-            android:title="EditText Preference"
-            android:summary="EditText Summary"
-            android:dialogMessage="Dialog Message"
+            android:defaultValue="default value"
             android:dialogLayout="@layout/preference_dialog_edittext_fix"
-            android:defaultValue="default value"/>
+            android:dialogMessage="Dialog Message"
+            android:key="key2"
+            android:summary="EditText Summary"
+            android:title="EditText Preference"/>
 
         <android.support.v7.preference.CheckBoxPreference
+            android:defaultValue="true"
             android:key="key3"
-            android:title="CheckBox Preference"
             android:summary="CheckBox summary"
-            android:defaultValue="true"/>
+            android:title="CheckBox Preference"/>
+
+        <com.example.t5_performing_network_operations.TimePreference
+            android:defaultValue="90"
+            android:key="key4"
+            android:summary="Time summary"
+            android:title="Time Preference"
+            style="@style/AppPreference.DialogPreference"/>
     </android.support.v7.preference.PreferenceCategory>
 </android.support.v7.preference.PreferenceScreen>

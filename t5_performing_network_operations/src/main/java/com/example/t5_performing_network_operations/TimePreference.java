@@ -54,6 +54,7 @@ public class TimePreference extends DialogPreference {
         setTime(restorePersistedValue ? getPersistedInt(mTime) : (Integer) defaultValue);
     }
 
+    // 为dialog设置layout resource
     @Override
     public int getDialogLayoutResource() {
         return mDialogLayoutResId;

@@ -22,4 +22,15 @@
         <!-- To keep the color of EditText -->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <!--Style for a Preference Entry 将把Settings界面上的preference的布局变成material design的-->
+    <style name="AppPreference">
+        <item name="android:layout">@layout/preference_material</item>
+    </style>
+
+    <!--Style for a DialogPreference Entry 定义对话框上的按钮的文字-->
+    <style name="AppPreference.DialogPreference">
+        <item name="positiveButtonText">@android:string/ok</item>
+        <item name="negativeButtonText">@android:string/cancel</item>
+    </style>
 </resources>
