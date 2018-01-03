@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <!--<item name="preferenceTheme">@style/PreferenceThemeOverlay</item>-->
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
         <item name="alertDialogTheme">@style/AppAlertDialog</item>
     </style>
     
@@ -32,5 +32,16 @@
     <style name="AppPreference.DialogPreference">
         <item name="positiveButtonText">@android:string/ok</item>
         <item name="negativeButtonText">@android:string/cancel</item>
+    </style>
+
+    <!--Custom Preference Theme-->
+    <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay.v14.Material">
+        <item name="preferenceFragmentCompatStyle">@style/AppPreferenceFragmentCompatStyle</item>
+    </style>
+
+    <!--Custom Style for PreferenceFragmentCompat-->
+    <style name="AppPreferenceFragmentCompatStyle" parent="@style/PreferenceFragment.Material">
+        <!--这里是为PreferenceFragmentCompat 自定义布局-->
+        <item name="android:layout">@layout/pref_screen</item>
     </style>
 </resources>

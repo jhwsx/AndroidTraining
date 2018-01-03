@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button in custom layout"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/list_container"/>
+</LinearLayout>
+<!--注意谷歌把 R.id.list_container (in revision 23.4.0)
+改成了 android.R.id.list_container (in revision 24.0.0)。Android Studio 会提示新id需要API 24，但是就版本仍然能用。-->
