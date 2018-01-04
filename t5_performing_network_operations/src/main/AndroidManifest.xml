@@ -23,7 +23,10 @@
 
         <activity android:name=".SettingsActivity"
             android:label="@string/settings">
+            <!--To write an app that supports network access and managing network usage,
+            your manifest must have the right permissions and intent filters.-->
             <intent-filter>
+                <!-- This action indicates that your application defines an activity that offers options to control data usage-->
                 <action android:name="android.intent.action.MANAGE_NETWORK_USAGE"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

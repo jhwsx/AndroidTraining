@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="network_names_array">
+        <item>@string/only_when_on_wifi</item>
+        <item>@string/on_any_network</item>
+    </string-array>
+
+    <string-array name="network_values_array">
+        <item>Wi-Fi</item>
+        <item>Any</item>
+    </string-array>
+</resources>

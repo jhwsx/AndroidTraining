@@ -29,5 +29,12 @@
             android:summary="Time summary"
             android:title="Time Preference"
             style="@style/AppPreference.DialogPreference"/>
+        <android.support.v7.preference.ListPreference
+            android:key="key5"
+            android:title="Download Feed"
+            android:summary="Network connectivity required to download the feed"
+            android:entries="@array/network_names_array"
+            android:defaultValue="Wi-Fi"
+            android:entryValues="@array/network_values_array"/>
     </android.support.v7.preference.PreferenceCategory>
 </android.support.v7.preference.PreferenceScreen>
