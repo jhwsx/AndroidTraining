@@ -6,13 +6,12 @@ android {
 
 
     defaultConfig {
-        applicationId "com.wan.t6_diffutil_demo"
+        applicationId "com.wzc.t7_viewpager_fragment_lazyload"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
 
@@ -26,12 +25,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+
 
 }

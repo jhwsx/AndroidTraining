@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.wan.t6_diffutil_demo">
+          package="com.wzc.t7_viewpager_fragment_lazyload">
 
     <application
         android:allowBackup="true"

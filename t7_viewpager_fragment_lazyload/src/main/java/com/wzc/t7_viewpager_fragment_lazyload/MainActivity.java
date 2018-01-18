@@ -1,4 +1,4 @@
-package com.wan.t6_diffutil_demo;
+package com.wzc.t7_viewpager_fragment_lazyload;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
