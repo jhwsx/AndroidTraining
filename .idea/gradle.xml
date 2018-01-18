@@ -14,7 +14,9 @@
             <option value="$PROJECT_DIR$/t3_add_animations" />
             <option value="$PROJECT_DIR$/t4_test_apps" />
             <option value="$PROJECT_DIR$/t5_performing_network_operations" />
+            <option value="$PROJECT_DIR$/t6_volley" />
             <option value="$PROJECT_DIR$/t7_viewpager_fragment_lazyload" />
+            <option value="$PROJECT_DIR$/volley-master" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
