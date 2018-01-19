@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">t7_viewpager_fragment_lazyload</string>
+    <string name="first">1</string>
+    <string name="second">2</string>
+    <string name="third">3</string>
 </resources>
