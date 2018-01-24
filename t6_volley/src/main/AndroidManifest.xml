@@ -17,6 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".SendASimpleRequestActivity"
+            android:label="SendASimpleRequestActivity"/>
+
+        <activity
+            android:name=".SetupARequestQueueActivity"
+            android:label="SetupARequestQueueActivity"/>
     </application>
 
 </manifest>
