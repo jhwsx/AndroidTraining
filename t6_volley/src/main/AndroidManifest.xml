@@ -3,6 +3,7 @@
           package="com.example.t6_volley">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,12 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SendASimpleRequestActivity"
+        <activity
+            android:name=".SendASimpleRequestActivity"
             android:label="SendASimpleRequestActivity"/>
-
         <activity
             android:name=".SetupARequestQueueActivity"
             android:label="SetupARequestQueueActivity"/>
+        <activity android:name=".RequestJsonActivity"
+            android:label="RequestJsonActivity">
+        </activity>
     </application>
 
 </manifest>

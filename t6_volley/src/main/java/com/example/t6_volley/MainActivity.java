@@ -8,6 +8,7 @@ public class MainActivity extends BaseActivity {
 
     private Button mBtnSendSimpleRequest;
     private Button mBtnSetupRequestQueue;
+    private Button mBtnRequestJson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,14 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 SetupARequestQueueActivity.start(mContext);
+            }
+        });
+
+        mBtnRequestJson = (Button) findViewById(R.id.button_request_json);
+        mBtnRequestJson.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RequestJsonActivity.start(mContext);
             }
         });
     }
