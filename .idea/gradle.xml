@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/t5_performing_network_operations" />
             <option value="$PROJECT_DIR$/t6_volley" />
             <option value="$PROJECT_DIR$/t7_viewpager_fragment_lazyload" />
+            <option value="$PROJECT_DIR$/t8_acitivity_lifecycle" />
             <option value="$PROJECT_DIR$/volley-master" />
           </set>
         </option>

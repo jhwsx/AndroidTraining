@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/t5_performing_network_operations/t5_performing_network_operations.iml" filepath="$PROJECT_DIR$/t5_performing_network_operations/t5_performing_network_operations.iml" />
       <module fileurl="file://$PROJECT_DIR$/t6_volley/t6_volley.iml" filepath="$PROJECT_DIR$/t6_volley/t6_volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/t7_viewpager_fragment_lazyload/t7_viewpager_fragment_lazyload.iml" filepath="$PROJECT_DIR$/t7_viewpager_fragment_lazyload/t7_viewpager_fragment_lazyload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t8_acitivity_lifecycle/t8_acitivity_lifecycle.iml" filepath="$PROJECT_DIR$/t8_acitivity_lifecycle/t8_acitivity_lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/volley-master/volley-master.iml" filepath="$PROJECT_DIR$/volley-master/volley-master.iml" />
     </modules>
   </component>
