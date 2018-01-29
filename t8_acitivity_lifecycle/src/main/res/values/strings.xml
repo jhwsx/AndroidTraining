@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">t8_acitivity_lifecycle</string>
+    <string name="landscape">Landscape</string>
+    <string name="portrait">Portrait</string>
 </resources>
