@@ -1,4 +1,4 @@
-include ':app', ':t8_acitivity_lifecycle'
+include ':app', ':t8_acitivity_lifecycle', ':t8_test_singleinstance_app'
 include ':t1_displaybitmapdemo'
 include ':t2_sceneandtransitionsdemo'
 include ':t3_add_animations'

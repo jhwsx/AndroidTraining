@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/t6_volley" />
             <option value="$PROJECT_DIR$/t7_viewpager_fragment_lazyload" />
             <option value="$PROJECT_DIR$/t8_acitivity_lifecycle" />
+            <option value="$PROJECT_DIR$/t8_test_singleinstance_app" />
             <option value="$PROJECT_DIR$/volley-master" />
           </set>
         </option>
