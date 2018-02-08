@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/t10_notification" />
             <option value="$PROJECT_DIR$/t1_displaybitmapdemo" />
             <option value="$PROJECT_DIR$/t2_sceneandtransitionsdemo" />
             <option value="$PROJECT_DIR$/t3_add_animations" />
@@ -18,6 +19,7 @@
             <option value="$PROJECT_DIR$/t7_viewpager_fragment_lazyload" />
             <option value="$PROJECT_DIR$/t8_acitivity_lifecycle" />
             <option value="$PROJECT_DIR$/t8_test_singleinstance_app" />
+            <option value="$PROJECT_DIR$/t9_mvp_demo" />
             <option value="$PROJECT_DIR$/volley-master" />
           </set>
         </option>

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidTraining.iml" filepath="$PROJECT_DIR$/AndroidTraining.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t10_notification/t10_notification.iml" filepath="$PROJECT_DIR$/t10_notification/t10_notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" filepath="$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" filepath="$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" filepath="$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" />
@@ -13,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/t7_viewpager_fragment_lazyload/t7_viewpager_fragment_lazyload.iml" filepath="$PROJECT_DIR$/t7_viewpager_fragment_lazyload/t7_viewpager_fragment_lazyload.iml" />
       <module fileurl="file://$PROJECT_DIR$/t8_acitivity_lifecycle/t8_acitivity_lifecycle.iml" filepath="$PROJECT_DIR$/t8_acitivity_lifecycle/t8_acitivity_lifecycle.iml" />
       <module fileurl="file://$PROJECT_DIR$/t8_test_singleinstance_app/t8_test_singleinstance_app.iml" filepath="$PROJECT_DIR$/t8_test_singleinstance_app/t8_test_singleinstance_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t9_mvp_demo/t9_mvp_demo.iml" filepath="$PROJECT_DIR$/t9_mvp_demo/t9_mvp_demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/volley-master/volley-master.iml" filepath="$PROJECT_DIR$/volley-master/volley-master.iml" />
     </modules>
   </component>
