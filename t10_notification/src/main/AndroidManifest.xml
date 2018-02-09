@@ -16,6 +16,34 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".ResultActivity">
+        </activity>
+        <activity
+            android:name=".RegularActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name=".SpecialActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.wan.t10_notification.new">
+
+        </activity>
+
+        <activity android:name=".PingActivity"
+            android:label="Ping me"/>
+
+        <activity android:name=".PingResultActivity"
+            android:label="PingResult"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:taskAffinity=""/>
+
+        <service android:name=".PingService"/>
     </application>
 
 </manifest>

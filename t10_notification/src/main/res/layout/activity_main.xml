@@ -1,19 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.wan.t10_notification.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_notification_simple"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:text="构建通知"
+        android:layout_height="wrap_content"/>
 
-</android.support.constraint.ConstraintLayout>
+    tools:context="com.wan.t10_notification.MainActivity">
+
+    <Button
+        android:id="@+id/btn_notification_preservce_regular"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:text="Preserving Navigation when Starting Regular Activity"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_notification_preservce_specail"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:text="Preserving Navigation when Starting Special Activity"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_notification_update"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:text="Update Notification"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_big_view_style"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:text="BigViewStyles"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_progress_notification"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:text="Display a Fixed-duration Progress Indicator"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_progress_notification_1"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:text="Display a Continuing Activity Indicator"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
