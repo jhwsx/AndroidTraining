@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/t10_notification" />
+            <option value="$PROJECT_DIR$/t11_swipe_to_refresh" />
             <option value="$PROJECT_DIR$/t1_displaybitmapdemo" />
             <option value="$PROJECT_DIR$/t2_sceneandtransitionsdemo" />
             <option value="$PROJECT_DIR$/t3_add_animations" />
