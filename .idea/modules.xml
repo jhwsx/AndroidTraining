@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/t10_notification/t10_notification.iml" filepath="$PROJECT_DIR$/t10_notification/t10_notification.iml" />
       <module fileurl="file://$PROJECT_DIR$/t11_swipe_to_refresh/t11_swipe_to_refresh.iml" filepath="$PROJECT_DIR$/t11_swipe_to_refresh/t11_swipe_to_refresh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/t12_add_search_functionality/t12_add_search_functionality.iml" filepath="$PROJECT_DIR$/t12_add_search_functionality/t12_add_search_functionality.iml" />
       <module fileurl="file://$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" filepath="$PROJECT_DIR$/t1_displaybitmapdemo/t1_displaybitmapdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" filepath="$PROJECT_DIR$/t2_sceneandtransitionsdemo/t2_sceneandtransitionsdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" filepath="$PROJECT_DIR$/t3_add_animations/t3_add_animations.iml" />
