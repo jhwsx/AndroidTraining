@@ -1,8 +1,10 @@
 package com.wan.t14_adding_the_app_bar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ShareActionProvider;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
@@ -49,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        MenuItem shareItem = menu.findItem(R.id.action_share);
+        ShareActionProvider shareActionProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(shareItem);
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT,"hello world" );
+        shareActionProvider.setShareIntent(shareIntent);
         return true;
     }
 
@@ -60,6 +68,12 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.action_settings:
                 Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_share_1:
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_TEXT,"hello world" );
+                startActivity(Intent.createChooser(shareIntent,"Share"));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
