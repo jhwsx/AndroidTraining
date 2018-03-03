@@ -17,6 +17,7 @@ import android.graphics.Shader;
 import android.graphics.SweepGradient;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -32,7 +33,8 @@ import java.util.List;
  * Custom view that shows a pie chart and, optionally, a label.
  */
 public class PieChart extends ViewGroup {
-    private List<Item> mData = new ArrayList<Item>();
+    private static final String TAG = PieChart.class.getSimpleName();
+    public List<Item> mData = new ArrayList<Item>();
 
     private float mTotal = 0.0f;
 
@@ -43,23 +45,45 @@ public class PieChart extends ViewGroup {
     private Paint mShadowPaint;
 
     private boolean mShowText = false;
-
+    /**
+     * 标签文字起点的x坐标
+     */
     private float mTextX = 0.0f;
+    /**
+     * 标签文字起点的y坐标
+     */
     private float mTextY = 0.0f;
+    /**
+     * 文字的宽度,这个需要设置一个较大的值,防止文字不能完全展示
+     */
     private float mTextWidth = 0.0f;
+    /**
+     * 文字的高度,设置为文字的大小
+     */
     private float mTextHeight = 0.0f;
+    /**
+     * 文字的对齐方式
+     */
     private int mTextPos = TEXTPOS_LEFT;
 
     private float mHighlightStrength = 1.15f;
 
     private float mPointerRadius = 2.0f;
+    /**
+     * 指针的x坐标
+     */
     private float mPointerX;
+    /**
+     * 指针的y坐标
+     */
     private float mPointerY;
 
     private int mPieRotation;
 
     private OnCurrentItemChangedListener mCurrentItemChangedListener = null;
-
+    /**
+     * 文本颜色,也是文本右边指针的颜色
+     */
     private int mTextColor;
     private PieView mPieView;
     private Scroller mScroller;
@@ -75,6 +99,9 @@ public class PieChart extends ViewGroup {
     private int mCurrentItem = 0;
     private boolean mAutoCenterInSlice;
     private ObjectAnimator mAutoCenterAnimator;
+    /**
+     * 阴影的框
+     */
     private RectF mShadowBounds = new RectF();
 
     /**
@@ -123,7 +150,7 @@ public class PieChart extends ViewGroup {
      *
      * @param context
      * @param attrs   An attribute set which can contain attributes from
-     *                {@link com.wan.t16_creating_custom_views.R.styleable.PieChart} as well as attributes inherited
+     *                { com.wan.t16_creating_custom_views.R.styleable.PieChart} as well as attributes inherited
      *                from {@link android.view.View}.
      */
     public PieChart(Context context, AttributeSet attrs) {
@@ -337,6 +364,7 @@ public class PieChart extends ViewGroup {
      * @param rotation The current pie rotation, in degrees.
      */
     public void setPieRotation(int rotation) {
+        Log.d(TAG, "setPieRotation rotation : " + rotation);
         rotation = (rotation % 360 + 360) % 360;
         mPieRotation = rotation;
         mPieView.rotateTo(rotation);
@@ -373,6 +401,7 @@ public class PieChart extends ViewGroup {
      *                       will not change.
      */
     private void setCurrentItem(int currentItem, boolean scrollIntoView) {
+        Log.d(TAG, "setCurrentItem: currentItem = " + currentItem);
         mCurrentItem = currentItem;
         if (mCurrentItemChangedListener != null) {
             mCurrentItemChangedListener.OnCurrentItemChanged(this, currentItem);
@@ -405,6 +434,7 @@ public class PieChart extends ViewGroup {
      * @return The index of the newly added item.
      */
     public int addItem(String label, float value, int color) {
+        Log.d(TAG, "addItem label = " + label + ", value = " + value);
         Item it = new Item();
         it.mLabel = label;
         it.mColor = color;
@@ -457,11 +487,11 @@ public class PieChart extends ViewGroup {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        // Draw the shadow
+        Log.d(TAG, "PieChart onDraw");
+        // Draw the shadow 画阴影
         canvas.drawOval(mShadowBounds, mShadowPaint);
 
-        // Draw the label text
+        // Draw the label text 画标签文字
         if (getShowText()) {
             canvas.drawText(mData.get(mCurrentItem).mLabel, mTextX, mTextY, mTextPaint);
         }
@@ -491,11 +521,14 @@ public class PieChart extends ViewGroup {
         return (int) mTextWidth;
     }
 
+    // 通过重写onMeasure()方法,达到的目的是
+    // 使这个控件的宽度尽量的大些
+    // 使这个控件的高度尽量的小些
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         // Try for a width based on our minimum
         int minw = getPaddingLeft() + getPaddingRight() + getSuggestedMinimumWidth();
-
+        // 使用MeasureSpec.getSize()获取xml中定义的宽,并且与minw比较,取大的那个
         int w = Math.max(minw, MeasureSpec.getSize(widthMeasureSpec));
 
         // Whatever the width ends up being, ask for a height that would let the pie
@@ -503,13 +536,15 @@ public class PieChart extends ViewGroup {
         int minh = (w - (int) mTextWidth) + getPaddingBottom() + getPaddingTop();
         int h = Math.min(MeasureSpec.getSize(heightMeasureSpec), minh);
 
+        Log.d(TAG, "PieChart onMeasure w = " + w + ", h = " + h);
         setMeasuredDimension(w, h);
     }
 
+    // 在布局过程中当view的尺寸改变时被调用
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-
+        Log.d(TAG, "PieChart onSizeChanged w = " + w + ", h = " + h + ", oldw = " + oldw + ", oldh = " + oldh);
         //
         // Set dimensions for text, pie chart, etc
         //
@@ -532,16 +567,16 @@ public class PieChart extends ViewGroup {
                 0.0f,
                 diameter,
                 diameter);
-        mPieBounds.offsetTo(getPaddingLeft(), getPaddingTop());
+        mPieBounds.offsetTo(getPaddingLeft(), getPaddingTop()); //偏移内边距的距离
 
         mPointerY = mTextY - (mTextHeight / 2.0f);
-        float pointerOffset = mPieBounds.centerY() - mPointerY;
+        float pointerOffset = mPieBounds.centerY() - mPointerY; // 指针的y坐标相对于pie的框中心的偏移量
 
         // Make adjustments based on text position
         if (mTextPos == TEXTPOS_LEFT) {
             mTextPaint.setTextAlign(Paint.Align.RIGHT);
             if (mShowText) {
-                mPieBounds.offset(mTextWidth, 0.0f);
+                mPieBounds.offset(mTextWidth, 0.0f); // 把pie的框右偏移文本的宽度
             }
             mTextX = mPieBounds.left;
 
@@ -571,14 +606,14 @@ public class PieChart extends ViewGroup {
                 mPieBounds.right - 10,
                 mPieBounds.bottom + 20);
 
-        // Lay out the child view that actually draws the pie.
+        // Lay out the child view that actually draws the pie.这里调用后,PieView的onSizeChanged()方法,就会被调用了,就拿到了PieView自己的框
         mPieView.layout((int) mPieBounds.left,
                 (int) mPieBounds.top,
                 (int) mPieBounds.right,
                 (int) mPieBounds.bottom);
         mPieView.setPivot(mPieBounds.width() / 2, mPieBounds.height() / 2);
 
-        mPointerView.layout(0, 0, w, h);
+        mPointerView.layout(0, 0, w, h); //todo 此行不调用,那么指针无法绘制出来,为什么呢?
         onDataChanged();
     }
 
@@ -587,6 +622,7 @@ public class PieChart extends ViewGroup {
      * field accordingly.
      */
     private void calcCurrentItem() {
+        Log.d(TAG, "calcCurrentItem");
         int pointerAngle = (mCurrentItemAngle + 360 + mPieRotation) % 360;
         for (int i = 0; i < mData.size(); ++i) {
             Item it = mData.get(i);
@@ -603,6 +639,7 @@ public class PieChart extends ViewGroup {
      * Do all of the recalculations needed when the data array changes.
      */
     private void onDataChanged() {
+        Log.d(TAG, "onDataChanged");
         // When the data changes, we have to recalculate
         // all of the angles.
         int currentAngle = 0;
@@ -610,7 +647,7 @@ public class PieChart extends ViewGroup {
             it.mStartAngle = currentAngle;
             it.mEndAngle = (int) ((float) currentAngle + it.mValue * 360.0f / mTotal);
             currentAngle = it.mEndAngle;
-
+            Log.d(TAG, "onDataChanged label = " + it.mLabel + ", (start, end) = (" + it.mStartAngle + ", " + it.mEndAngle + ")");
 
             // Recalculate the gradient shaders. There are
             // three values in this gradient, even though only
@@ -763,6 +800,7 @@ public class PieChart extends ViewGroup {
 
     private void setLayerToSW(View v) {
         if (!v.isInEditMode() && Build.VERSION.SDK_INT >= 11) {
+            // 关闭这个View的硬件加速功能
             setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         }
     }
@@ -789,6 +827,7 @@ public class PieChart extends ViewGroup {
      * Called when the user finishes a scroll action.
      */
     private void onScrollFinished() {
+        Log.d(TAG, "onScrollFinished");
         if (mAutoCenterInSlice) {
             centerOnCurrentItem();
         } else {
@@ -803,10 +842,15 @@ public class PieChart extends ViewGroup {
     private void centerOnCurrentItem() {
         Item current = mData.get(getCurrentItem());
         int targetAngle = current.mStartAngle + (current.mEndAngle - current.mStartAngle) / 2;
+        Log.d(TAG, "centerOnCurrentItem currentItem = "+getCurrentItem()+", (startAngle, endAngle) = (" + current.mStartAngle + ", " + current.mEndAngle + ")");
         targetAngle -= mCurrentItemAngle;
-        if (targetAngle < 90 && mPieRotation > 180) targetAngle += 360;
+        Log.d(TAG, "centerOnCurrentItem: targetAngle = " + targetAngle + ", mCurrentItemAngle = " + mCurrentItemAngle + ", mPieRotation = " + mPieRotation);
+        if (targetAngle < 90 && mPieRotation > 180) {
+            targetAngle += 360;
+        }
 
         if (Build.VERSION.SDK_INT >= 11) {
+            Log.d(TAG, "centerOnCurrentItem targetAngle = " + targetAngle);
             // Fancy animated version
             mAutoCenterAnimator.setIntValues(targetAngle);
             mAutoCenterAnimator.setDuration(AUTOCENTER_ANIM_DURATION).start();
@@ -852,7 +896,7 @@ public class PieChart extends ViewGroup {
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
-
+            Log.d(TAG, "PieView onDraw");
             if (Build.VERSION.SDK_INT < 11) {
                 mTransform.set(canvas.getMatrix());
                 mTransform.preRotate(mRotation, mPivot.x, mPivot.y);
@@ -870,6 +914,7 @@ public class PieChart extends ViewGroup {
 
         @Override
         protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+            Log.d(TAG, "PieView onSizeChanged w = " + w + ", h = " + h + ", oldw = " + oldw + ", oldh = " + oldh);
             mBounds = new RectF(0, 0, w, h);
         }
 
@@ -938,8 +983,17 @@ public class PieChart extends ViewGroup {
      * processing.
      */
     private class GestureListener extends GestureDetector.SimpleOnGestureListener {
+        // 用户按下触摸屏并拖动时触发,由一个down和多个move触发
+        // 这个方法会多次触发
+        // 参数含义:
+        // 参一: 是第一个down事件
+        // 参二: 是一个move事件,触发当前onScroll的那个move事件
+        // 参三: 相邻两次调用onScroll时,在x方向上移动的距离,向左为正,向右为负
+        // 参四: 相邻两次调用onScroll时,在y方向上移动的距离,向上为正,向下为负
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            Log.d(TAG, "onScroll: distanceX = " + distanceX + ", distanceY = " + distanceY + ", e2.getX() = " + e2.getX() + ", e2.getY() = " + e2.getY()
+            +", mPieBounds.centerX() = " + mPieBounds.centerX() + ", mPieBounds.centerY() = " + mPieBounds.centerY());
             // Set the pie rotation directly.
             float scrollTheta = vectorToScalarScroll(
                     distanceX,
@@ -949,15 +1003,42 @@ public class PieChart extends ViewGroup {
             setPieRotation(getPieRotation() - (int) scrollTheta / FLING_VELOCITY_DOWNSCALE);
             return true;
         }
-
+        // 用户按下触摸屏,快速移动后松开,一个down,多个move和一个up触发
+        // 如果用户不是快速移动后松开,则不会触发
+        // 参数含义:
+        // 参一:e1 是第一个down事件
+        // 参二:e2 是一个up事件
+        // 参三: velocityX：X轴上的移动速度，像素/秒,左为负,右为正
+        // 参四: velocityY：Y轴上的移动速度，像素/秒,上为负,下为正
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            Log.d(TAG, "onFling: velocityX = " + velocityX + ", velocityY = " + velocityY + ", e2.getX() = " + e2.getX() + ", e2.getY() = " + e2.getY()
+                    +", mPieBounds.centerX() = " + mPieBounds.centerX() + ", mPieBounds.centerY() = " + mPieBounds.centerY());
             // Set up the Scroller for a fling
             float scrollTheta = vectorToScalarScroll(
                     velocityX,
                     velocityY,
                     e2.getX() - mPieBounds.centerX(),
                     e2.getY() - mPieBounds.centerY());
+            /**
+             * Start scrolling based on a fling gesture. The distance travelled will
+             * depend on the initial velocity of the fling.
+             *
+             * @param startX Starting point of the scroll (X)
+             * @param startY Starting point of the scroll (Y)
+             * @param velocityX Initial velocity of the fling (X) measured in pixels per
+             *        second.
+             * @param velocityY Initial velocity of the fling (Y) measured in pixels per
+             *        second
+             * @param minX Minimum X value. The scroller will not scroll past this
+             *        point.
+             * @param maxX Maximum X value. The scroller will not scroll past this
+             *        point.
+             * @param minY Minimum Y value. The scroller will not scroll past this
+             *        point.
+             * @param maxY Maximum Y value. The scroller will not scroll past this
+             *        point.
+             */
             mScroller.fling(
                     0,
                     (int) getPieRotation(),
@@ -975,9 +1056,10 @@ public class PieChart extends ViewGroup {
             }
             return true;
         }
-
+        // 用户轻触触摸屏,由一个MotionEvent.ACTION_DOWN触发
         @Override
         public boolean onDown(MotionEvent e) {
+            Log.d(TAG, "onDown");
             // The user is interacting with the pie, so we want to turn on acceleration
             // so that the interaction is smooth.
             mPieView.accelerate();
@@ -1011,6 +1093,7 @@ public class PieChart extends ViewGroup {
         float crossY = x;
 
         float dot = (crossX * dx + crossY * dy);
+        // 返回参数的符号函数；如果参数为 0，则返回 0；如果参数大于 0，则返回 1.0；如果参数小于 0，则返回 -1.0。
         float sign = Math.signum(dot);
 
         return l * sign;
