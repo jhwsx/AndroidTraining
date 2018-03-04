@@ -1,4 +1,4 @@
-include ':app', ':t16_creating_custom_views'
+include ':app', ':t16_creating_custom_views', ':t17_accesssibility'
 include ':t1_displaybitmapdemo'
 include ':t2_sceneandtransitionsdemo'
 include ':t3_add_animations'

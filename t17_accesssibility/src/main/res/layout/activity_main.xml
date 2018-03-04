@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wan.t17_accesssibility.MainActivity">
+    <TextView
+        android:id="@+id/tv_do_sth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do something"/>
+    <TextView
+        android:id="@+id/tv"
+        android:text="Hello world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:nextFocusUp="@id/tv_do_sth"
+        android:contentDescription="江山如此多娇"/>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="按钮"
+        android:contentDescription="我是一个按钮"
+        android:focusable="true"
+        android:nextFocusDown="@id/tv"/>
+
+
+</LinearLayout>

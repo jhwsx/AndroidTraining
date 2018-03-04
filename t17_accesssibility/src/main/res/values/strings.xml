@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">t17_accesssibility</string>
+    <string name="accessibility_description">这是一个辅助服务的描述语.</string>
+</resources>
