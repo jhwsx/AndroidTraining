@@ -1,76 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
+    android:orientation="vertical"
     tools:context="com.wan.t18_manage_system_ui.MainActivity">
 
     <Button
-        android:id="@+id/btn_dim_bars"
+        android:id="@+id/btn_dim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dim the Status and Navigation Bars"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/btn_reveal_bars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reveal the Status and Navigation Bars"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_dim_bars"/>
-
+        android:text="Dim the Status and Navigation Bars"/>
     <Button
         android:id="@+id/btn_hide_bars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hide the Status Bar on Android 4.1 and Higher"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_reveal_bars"/>
+        android:text="Hide Status Bar"/>
+
     <Button
-        android:id="@+id/btn_show_bars"
+        android:id="@+id/btn_hide_system_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show the Status Bar on Android 4.1 and Higher"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hide_bars"/>
-    <Button
-        android:id="@+id/btn_hide_nav_bars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hide the Navigation Bar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_show_bars"/>
-    <Button
-        android:id="@+id/btn_show_nav_bars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Show the Navigation Bar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_hide_nav_bars"/>
+        android:text="Hide System bar"/>
+
     <Button
         android:id="@+id/btn_use_immersive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Using Immersive Full-Screen Mode "
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_show_nav_bars"/>
-    <TextView
+        android:text="Using Immersive Full-Screen Mode "/>
+
+
+    <Button
+        android:id="@+id/btn_my"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am in the bottom"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-</android.support.constraint.ConstraintLayout>
+        android:text="使用fitSystemWindows的例子"/>
+
+</LinearLayout>

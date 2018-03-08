@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".DimActivity"/>
+        <activity android:name=".HideStatusbarActivity"/>
+        <activity android:name=".HideSystembarAcitivity"/>
+        <activity android:name=".ImmersiveFullscreenActivity"/>
+        <activity android:name=".MyActivity"
+            android:theme="@style/AppTheme.NoActionbar"/>
+
     </application>
 
 </manifest>
