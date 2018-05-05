@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    android:drawable="@drawable/square"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <target
+        android:animation="@animator/to_triangle"
+        android:name="square"/>
+    <target
+        android:animation="@animator/color"
+        android:name="square"/>
+</animated-vector>

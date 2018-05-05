@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/g1_service" />
             <option value="$PROJECT_DIR$/t10_notification" />
             <option value="$PROJECT_DIR$/t11_swipe_to_refresh" />
             <option value="$PROJECT_DIR$/t12_add_search_functionality" />
@@ -20,6 +21,7 @@
             <option value="$PROJECT_DIR$/t18_manage_system_ui" />
             <option value="$PROJECT_DIR$/t19_md" />
             <option value="$PROJECT_DIR$/t1_displaybitmapdemo" />
+            <option value="$PROJECT_DIR$/t20_vdh" />
             <option value="$PROJECT_DIR$/t2_sceneandtransitionsdemo" />
             <option value="$PROJECT_DIR$/t3_add_animations" />
             <option value="$PROJECT_DIR$/t4_test_apps" />

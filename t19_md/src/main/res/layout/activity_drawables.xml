@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.t19_md.MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:text="TintActivity"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:layout_marginTop="8dp"
+        android:padding="16dp"
+        android:text="PaletteActivity1"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/tv0"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:padding="16dp"
+        android:text="PaletteActivity2"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/tv00"
+        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:padding="16dp"
+        android:text="VectorDrawableActivity"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"/>
+
+
+
+</LinearLayout>

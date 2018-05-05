@@ -14,8 +14,26 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SecondActivity"
-            android:label="SecondActivity"></activity>
+        <activity android:name=".shadows_clipping.ShadowsClippingActivity"
+            android:label="ShadowsClippingActivity"/>
+        <activity
+            android:name=".drawables.DrawablesActivity"
+            android:label="DrawablesActivity"/>
+
+        <activity android:name=".drawables.TintActivity"
+            android:label="TintActivity"/>
+
+        <activity android:name=".drawables.PaletteActivity1"
+            android:theme="@style/PaletteTheme"/>
+
+        <activity android:name=".drawables.PaletteActivity2"
+            android:theme="@style/PaletteTheme"/>
+
+        <activity android:name=".drawables.VectorDrawableActivity"
+                  android:theme="@style/PaletteTheme"/>
+
+        <activity android:name=".custom_animations.CustomAnimationsActivity"
+            android:label="CustomAnimationsActivity"/>
     </application>
 
 </manifest>
