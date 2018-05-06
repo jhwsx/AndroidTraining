@@ -67,5 +67,12 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.buttonBlog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DirectionDragActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

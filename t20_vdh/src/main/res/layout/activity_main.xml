@@ -53,4 +53,10 @@
         android:text="Wzc demo"
         android:id="@+id/buttonWzc"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blog demo"
+        android:id="@+id/buttonBlog"
+        />
 </LinearLayout>

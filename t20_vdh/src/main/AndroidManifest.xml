@@ -24,6 +24,8 @@
         <activity android:name="com.wzc.t20_vdh.HongyangDemoActivity"/>
         <activity android:name="com.wzc.t20_vdh.ThreeDirectionScrollUnlockActivity"
             android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name="com.wzc.t20_vdh.DirectionDragActivity"
+            android:theme="@style/Theme.AppCompat.Light"/>
     </application>
 
 </manifest>
