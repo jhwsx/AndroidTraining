@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.android.interactivechart;
+package com.wzc.t21_using_touch_gestures.interactivechart;
 
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.view.ScaleGestureDetector;
 
 /**
- * A utility class for using {@link android.view.ScaleGestureDetector} in a backward-compatible
+ * A utility class for using {@link ScaleGestureDetector} in a backward-compatible
  * fashion.
  */
 public class ScaleGestureDetectorCompat {
@@ -32,7 +32,7 @@ public class ScaleGestureDetectorCompat {
     }
 
     /**
-     * @see android.view.ScaleGestureDetector#getCurrentSpanX()
+     * @see ScaleGestureDetector#getCurrentSpanX()
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static float getCurrentSpanX(ScaleGestureDetector scaleGestureDetector) {
@@ -44,7 +44,7 @@ public class ScaleGestureDetectorCompat {
     }
 
     /**
-     * @see android.view.ScaleGestureDetector#getCurrentSpanY()
+     * @see ScaleGestureDetector#getCurrentSpanY()
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static float getCurrentSpanY(ScaleGestureDetector scaleGestureDetector) {

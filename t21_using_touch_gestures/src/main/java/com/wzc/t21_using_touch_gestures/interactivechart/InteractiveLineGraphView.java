@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.interactivechart;
+package com.wzc.t21_using_touch_gestures.interactivechart;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -39,6 +39,8 @@ import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.widget.OverScroller;
 
+import com.wzc.t21_using_touch_gestures.R;
+
 /**
  * A view representing a simple yet interactive line chart for the function <code>x^3 - x/4</code>.
  * <p>
@@ -62,7 +64,7 @@ import android.widget.OverScroller;
  * custom attributes (see the constructors), a simple implementation for
  * {@link #onMeasure(int, int)}, an implementation for {@link #onSaveInstanceState()} and a fairly
  * straightforward {@link Canvas}-based rendering implementation in
- * {@link #onDraw(android.graphics.Canvas)}.
+ * {@link #onDraw(Canvas)}.
  * <p>
  * Note that this view doesn't automatically support directional navigation or other accessibility
  * methods. Activities using this view should generally provide alternate navigation controls.
@@ -1211,7 +1213,7 @@ public class InteractiveLineGraphView extends View {
                     + " viewport=" + viewport.toString() + "}";
         }
 
-        public static final Parcelable.Creator<SavedState> CREATOR
+        public static final Creator<SavedState> CREATOR
                 = ParcelableCompat.newCreator(new ParcelableCompatCreatorCallbacks<SavedState>() {
             @Override
             public SavedState createFromParcel(Parcel in, ClassLoader loader) {

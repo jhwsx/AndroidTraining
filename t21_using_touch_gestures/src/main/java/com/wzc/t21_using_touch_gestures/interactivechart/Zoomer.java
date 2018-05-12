@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.android.interactivechart;
+package com.wzc.t21_using_touch_gestures.interactivechart;
 
 import android.content.Context;
 import android.os.SystemClock;
@@ -49,7 +49,7 @@ public class Zoomer {
     private float mCurrentZoom;
 
     /**
-     * The time the zoom started, computed using {@link android.os.SystemClock#elapsedRealtime()}.
+     * The time the zoom started, computed using {@link SystemClock#elapsedRealtime()}.
      */
     private long mStartRTC;
 

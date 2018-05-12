@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<com.wzc.t21_using_touch_gestures.MyViewGroup
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-</android.support.constraint.ConstraintLayout>
+    <com.wzc.t21_using_touch_gestures.MyChildView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#4400ff00"/>
+</com.wzc.t21_using_touch_gestures.MyViewGroup>

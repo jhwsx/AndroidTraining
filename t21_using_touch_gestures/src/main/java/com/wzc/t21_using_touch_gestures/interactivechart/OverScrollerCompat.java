@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.example.android.interactivechart;
+package com.wzc.t21_using_touch_gestures.interactivechart;
 
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.widget.OverScroller;
 
 /**
- * A utility class for using {@link android.widget.OverScroller} in a backward-compatible fashion.
+ * A utility class for using {@link OverScroller} in a backward-compatible fashion.
  */
 public class OverScrollerCompat {
     /**

@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <activity android:name=".TouchActivity"/>
+        <activity android:name=".GestureDetectorActivity"/>
+        <activity android:name=".TrackingMovementActivity"/>
+        <activity android:name=".ScrollActivity"/>
+        <activity android:name=".interactivechart.InteractiveChartActivity"/>
+        <activity android:name=".MultiTouchActivity"/>
+        <activity android:name=".DraggingActivity"/>
+        <activity android:name=".ManageTouchEventInViewGroupActivity"/>
+        <activity android:name=".ExtendTouchableAreaActivity"/>
     </application>
 
 </manifest>
