@@ -1,0 +1,38 @@
+<!--
+  Copyright 2013 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+    <declare-styleable name="InteractiveLineGraphView">
+        <!--文字大小-->
+        <attr name="labelTextSize" format="dimension" />
+        <!--文字颜色-->
+        <attr name="labelTextColor" format="color" />
+        <!--文字与轴线的间隔-->
+        <attr name="labelSeparation" format="dimension" />
+        <!--轴线线宽-->
+        <attr name="axisThickness" format="dimension" />
+        <!--轴线颜色-->
+        <attr name="axisColor" format="color" />
+        <!--曲线线宽-->
+        <attr name="dataThickness" format="dimension" />
+        <!--曲线颜色-->
+        <attr name="dataColor" format="color" />
+        <!--网格线线宽-->
+        <attr name="gridThickness" format="dimension" />
+        <!--网格线颜色-->
+        <attr name="gridColor" format="color" />
+    </declare-styleable>
+</resources>
