@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/usename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="进入页面就立马显示软键盘"
+        android:inputType="textPersonName"/>
+    <EditText
+        android:onClick="showSoftkeypad"
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="点我显示软键盘"
+        android:inputType="textPassword"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入评论"
+        android:inputType="text"/>
+</LinearLayout>

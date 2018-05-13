@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/phone"
+            android:hint="请输入电话号码"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/password"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/email"
+            android:hint="请输入邮箱地址"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/date"
+            android:hint="请输入日期"
+            android:inputType="datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/multiline"
+            android:hint="请输入多行"
+            android:inputType="textMultiLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable Spelling Suggestions and Other Behaviors"/>
+
+        <EditText
+            android:id="@+id/sentences"
+            android:hint="请输入句子"
+            android:inputType="textCapSentences|textAutoCorrect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Specify the Input Method Action"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/search"
+            android:hint="搜索"
+            android:inputType="text"
+            android:imeOptions="actionSearch"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/send"
+            android:hint="发送"
+            android:inputType="text"
+            android:imeOptions="actionSend"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/go"
+            android:hint="Go"
+            android:inputType="text"
+            android:imeOptions="actionGo"/>
+
+    </LinearLayout>
+</ScrollView>
