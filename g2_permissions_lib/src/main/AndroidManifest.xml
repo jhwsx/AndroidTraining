@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.wzc.g2_permission_lib">
+
+    <permission android:name="com.wzc.g2_permission_lib.PermissionActivity_ACCESS"
+        android:label="@string/activity_permission_label"
+        android:description="@string/activity_permission_desc"
+        android:protectionLevel="dangerous"/>
+
+    <permission android:name="com.wzc.g2_permission_lib.PermissionService_ACCESS"
+        android:label="@string/service_permission_label"
+        android:description="@string/service_permission_desc"
+        android:protectionLevel="dangerous"/>
+
+    <permission android:name="com.wzc.g2_permission_lib.PermissionBindService_ACCESS"/>
+
+    <permission android:name="com.wzc.g2_permission_lib.PermissionReceiver_ACCESS"
+        android:label="@string/service_permission_label"
+        android:description="@string/service_permission_desc"
+        android:protectionLevel="dangerous"/>
+
+    <uses-permission android:name="com.wzc.g2_permission.SendBroadcast_ACCESS"/>
+
+    <permission
+        android:name="com.wzc.g2_permission_lib.PermissionProvider_READ"
+        android:protectionLevel="dangerous"/>
+
+    <permission
+        android:name="com.wzc.g2_permission_lib.PermissionProvider_WRITE"
+        android:protectionLevel="dangerous"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".PermissionActivity"
+                  android:permission="com.wzc.g2_permission_lib.PermissionActivity_ACCESS"
+            android:exported="true">
+        </activity>
+
+        <service android:name=".PermissionService"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="com.wzc.g2_permission_lib.PermissionService_ACCESS">
+
+        </service>
+
+        <service android:name=".PermissionBindService"
+                 android:exported="true"/>
+
+        <receiver android:name=".PermissionReceiver"
+            android:permission="com.wzc.g2_permission_lib.PermissionReceiver_ACCESS">
+            <intent-filter>
+                <action android:name="com.wzc.g2_permission_lib.PermissionReceiver_ACTION"/>
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:exported="true"
+            android:readPermission="com.wzc.g2_permission_lib.PermissionProvider_READ"
+            android:writePermission="com.wzc.g2_permission_lib.PermissionProvider_WRITE"
+            android:authorities="com.wzc.g2_permission_lib.permissionprovider"
+            android:name=".PermissionProvider"/>
+    </application>
+
+</manifest>

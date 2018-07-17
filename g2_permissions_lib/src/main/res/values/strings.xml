@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">g2_permission_lib</string>
+    <string name="activity_permission_desc">允许打开PermissionActivity的权限, 这会使得在其它应用中打开PermissionActivity.</string>
+    <string name="service_permission_desc">允许打开PermissionService的权限, 这会使得在其它应用中打开PermissionService.</string>
+    <string name="receiver_permission_desc">允许向PermissionReceiver发送广播的权限, 这会使得在其它应用中向PermissionReceiver发送广播.</string>
+    <string name="activity_permission_label">允许打开PermissionActivity的权限</string>
+    <string name="service_permission_label">允许打开PermissionService的权限</string>
+    <string name="receiver_permission_label">允许向PermissionReceiver发送广播的权限</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">g2_permissions</string>
+    <string name="sendbroadcast_permission_label">允许接收发送广播的权限</string>
+    <string name="sendbroadcast_permission_desc">允许接收发送广播的权限, 声明这个权限, 就可以接收到发送的广播了</string>
+</resources>
