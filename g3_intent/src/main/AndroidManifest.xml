@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.wzc.g3_intent">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ReceiveImageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ReceiveTextActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActionTestActivity">
+            <intent-filter>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST"/>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST_1"/>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST_2"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".CategoryTestActivity">
+            <intent-filter>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST_4"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.wzc.g3_intent.CATEGORY_TEST"/>
+                <category android:name="com.wzc.g3_intent.CATEGORY_TEST_1"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DataTest1Activity">
+            <intent-filter>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST_5"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+                <!--android.content.ActivityNotFoundException: No Activity found to handle Intent { act=com.wzc.g3_intent.ACTION_TEST_5 typ=text/plain }-->
+                <!--<data android:scheme="wzc.datatest1"/>-->
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DataTest2Activity">
+            <intent-filter>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST_6"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wzc.datatest2"/>
+                <data android:host="com.wzc.datatest2.host"/>
+                <data android:path="/test2"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".DataTest3Activity">
+            <intent-filter>
+                <action android:name="com.wzc.g3_intent.ACTION_TEST_7"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wzc.datatest3"/>
+                <data android:host="com.wzc.datatest3.host"
+                      android:port="8888"/>
+                <data android:path="/test3"/>
+                <data android:mimeType="text/plain"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
