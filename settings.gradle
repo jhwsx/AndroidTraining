@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':g5_appwidgets'
 include ':t1_displaybitmapdemo'
 include ':t2_sceneandtransitionsdemo'
 include ':t3_add_animations'
