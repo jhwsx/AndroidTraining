@@ -36,7 +36,14 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
     @Override
     public void onAppWidgetOptionsChanged(Context context, AppWidgetManager appWidgetManager, int appWidgetId, Bundle newOptions) {
         super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions);
-        Log.d(TAG, "onAppWidgetOptionsChanged: ");
+        Bundle appWidgetOptions = appWidgetManager.getAppWidgetOptions(appWidgetId);
+        int minWidth = appWidgetOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_WIDTH);
+        int minHeight = appWidgetOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_MIN_HEIGHT);
+        int maxWidth = appWidgetOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_MAX_WIDTH);
+        int maxHeight = appWidgetOptions.getInt(AppWidgetManager.OPTION_APPWIDGET_MAX_HEIGHT);
+        Log.d(TAG, "onAppWidgetOptionsChanged: minWidth="+minWidth+", minHeight="+minHeight
+                +", maxWidth="+maxWidth+", maxHeight="+maxHeight);
+
     }
 
     // App Widget 第一次创建时调用
@@ -53,11 +60,17 @@ public class MyAppWidgetProvider extends AppWidgetProvider {
         Log.d(TAG, "onDisabled: ");
     }
 
+    @Override
+    public void onDeleted(Context context, int[] appWidgetIds) {
+        super.onDeleted(context, appWidgetIds);
+        Log.d(TAG, "onDeleted");
+    }
+
     // 当接收广播时调用, 在 onUpdate onEnabled onDisabled 之前调用
     @Override
     public void onReceive(Context context, Intent intent) {
-        super.onReceive(context, intent);
         Log.d(TAG, "onReceive: ");
+        super.onReceive(context, intent);
     }
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager, int appWidgetId) {

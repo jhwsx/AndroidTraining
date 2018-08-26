@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.EditText;
 
 /**
+ * Note:
+ * App Widget host 会调用这个Activity, 这个配置页面应该总是返回一个结果
  * @author wzc
  * @date 2018/8/13
  */
@@ -71,11 +73,13 @@ public class AppWidgetConfigureActivity extends AppCompatActivity implements Vie
         saveTitle2Sp(mContext, titlePrefix, mAppWidgetId);
 
         // Push widget update to surface with newly set prefix 把文字更新到 AppWidget 中
+        // 因为有配置页面时, onUpdate() 不会被调用, 所以更新需要自己处理
         AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(mContext);
         MyAppWidgetProvider.updateAppWidget(mContext, appWidgetManager, mAppWidgetId);
 
         // Make sure we pass back the original appWidgetId
         Intent result = new Intent();
+        // 返回的结果要包含从 intent 里取出来的 mAppWidgetId
         result.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
         setResult(RESULT_OK, result);
         finish();
