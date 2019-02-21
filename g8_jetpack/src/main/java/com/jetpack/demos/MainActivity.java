@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jetpack.demos.databinding.DatabindingActivity;
 import com.jetpack.demos.lifecycles.LifecyclesActivity;
 import com.jetpack.demos.livedata.LiveDataActivity;
 import com.jetpack.demos.room.RoomActivity;
+import com.jetpack.demos.springanimation.SpringAnimationActivity;
 import com.jetpack.demos.viewmodel.ViewModelActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +38,18 @@ public class MainActivity extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  ViewModelActivity.start(MainActivity.this);
+             }
+         });
+         findViewById(R.id.button_spring_animation).setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 SpringAnimationActivity.start(MainActivity.this);
+             }
+         });
+         findViewById(R.id.button_databinding).setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 DatabindingActivity.start(MainActivity.this);
              }
          });
     }

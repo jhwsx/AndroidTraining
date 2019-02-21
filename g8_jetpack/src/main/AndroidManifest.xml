@@ -23,6 +23,9 @@
         <activity android:name=".livedata.LiveDataActivity"/>
         <activity android:name=".viewmodel.ViewModelActivity"/>
         <activity android:name=".viewmodel.NewsActivity"/>
+        <activity android:name=".springanimation.SpringAnimationActivity"/>
+        <activity android:name=".databinding.DatabindingActivity"/>
+        <activity android:name=".databinding.DatabindingIncludeActivity"/>
     </application>
 
 </manifest>
