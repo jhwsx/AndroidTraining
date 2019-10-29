@@ -4,4 +4,17 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/button1"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dim the Status and Navigation Bars" />
+
+    <Button
+        android:id="@+id/button"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reveal the Status and Navigation Bars" />
 </LinearLayout>

@@ -16,7 +16,22 @@ public class DimActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dim);
 
-        View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+        findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View decorView = getWindow().getDecorView();
+                decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);
+            }
+        });
+
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View decorView = getWindow().getDecorView();
+                // Calling setSystemUiVisibility() with a value of 0 clears
+                // all flags.
+                decorView.setSystemUiVisibility(0);
+            }
+        });
     }
 }
