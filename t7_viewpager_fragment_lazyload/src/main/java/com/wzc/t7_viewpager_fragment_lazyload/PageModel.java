@@ -1,6 +1,6 @@
 package com.wzc.t7_viewpager_fragment_lazyload;
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 
 public class PageModel {
     /**

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.preference.PreferenceScreen
+<androidx.preference.PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v7.preference.PreferenceCategory
+    <androidx.preference.PreferenceCategory
         android:title="Category 1">
         <android.support.v7.preference.SwitchPreferenceCompat
             android:defaultValue="true"
@@ -36,5 +36,5 @@
             android:entries="@array/network_names_array"
             android:defaultValue="Wi-Fi"
             android:entryValues="@array/network_values_array"/>
-    </android.support.v7.preference.PreferenceCategory>
-</android.support.v7.preference.PreferenceScreen>
+    </androidx.preference.PreferenceCategory>
+</androidx.preference.PreferenceScreen>

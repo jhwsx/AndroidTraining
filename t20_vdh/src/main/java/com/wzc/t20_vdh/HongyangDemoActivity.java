@@ -2,7 +2,7 @@ package com.wzc.t20_vdh;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.wzc.t19_vdh.R;
 

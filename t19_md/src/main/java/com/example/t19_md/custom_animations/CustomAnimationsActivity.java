@@ -2,7 +2,7 @@ package com.example.t19_md.custom_animations;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.example.t19_md.R;
 

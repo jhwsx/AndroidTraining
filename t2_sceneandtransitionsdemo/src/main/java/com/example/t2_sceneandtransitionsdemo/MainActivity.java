@@ -2,7 +2,7 @@ package com.example.t2_sceneandtransitionsdemo;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.transition.Scene;
 import android.transition.Transition;
 import android.transition.TransitionInflater;

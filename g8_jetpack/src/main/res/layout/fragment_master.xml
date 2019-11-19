@@ -7,7 +7,7 @@
 
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:background="@android:color/holo_blue_dark"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -20,5 +20,5 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="0dp"
             android:layout_height="0dp"/>
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

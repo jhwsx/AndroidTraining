@@ -8,7 +8,7 @@ import android.app.Activity;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageButton;

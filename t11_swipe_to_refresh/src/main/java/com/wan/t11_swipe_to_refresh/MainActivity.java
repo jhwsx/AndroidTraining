@@ -1,7 +1,7 @@
 package com.wan.t11_swipe_to_refresh;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 

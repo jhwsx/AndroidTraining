@@ -9,7 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Environment;
-import android.support.v4.util.LruCache;
+import androidx.collection.LruCache;
 import android.util.Log;
 import android.widget.ImageView;
 

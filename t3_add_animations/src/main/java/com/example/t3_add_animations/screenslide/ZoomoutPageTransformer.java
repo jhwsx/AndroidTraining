@@ -1,6 +1,6 @@
 package com.example.t3_add_animations.screenslide;
 
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.util.Log;
 import android.view.View;
 

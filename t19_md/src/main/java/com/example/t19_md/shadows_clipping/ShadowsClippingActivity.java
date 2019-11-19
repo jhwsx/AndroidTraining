@@ -3,7 +3,7 @@ package com.example.t19_md.shadows_clipping;
 import android.app.Activity;
 import android.graphics.Outline;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.ViewOutlineProvider;
 import android.widget.TextView;

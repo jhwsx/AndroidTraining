@@ -11,7 +11,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;

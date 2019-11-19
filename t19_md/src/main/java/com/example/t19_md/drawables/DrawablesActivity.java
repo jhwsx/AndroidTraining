@@ -4,12 +4,11 @@ import android.app.Activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.transition.Explode;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.t19_md.MainActivity;
 import com.example.t19_md.R;
 
 /**

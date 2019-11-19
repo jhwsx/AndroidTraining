@@ -1,6 +1,6 @@
 package com.example.t8_acitivity_lifecycle;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by wzc on 2018/1/28.

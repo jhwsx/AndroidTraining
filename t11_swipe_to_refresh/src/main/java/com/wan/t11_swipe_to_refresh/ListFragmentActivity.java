@@ -2,7 +2,7 @@ package com.wan.t11_swipe_to_refresh;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 
 /**
  * @author wzc

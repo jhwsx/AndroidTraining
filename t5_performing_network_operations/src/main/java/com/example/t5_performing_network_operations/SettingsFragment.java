@@ -2,9 +2,9 @@ package com.example.t5_performing_network_operations;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceDialogFragmentCompat;
-import android.support.v7.preference.PreferenceFragmentCompat;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceDialogFragmentCompat;
+import androidx.preference.PreferenceFragmentCompat;
 
 /**
  * Created by wzc on 2018/1/1.

@@ -4,8 +4,8 @@ import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.ComponentName;
 import android.content.Context;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.SearchView;
+import androidx.fragment.app.Fragment;
+import androidx.appcompat.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 

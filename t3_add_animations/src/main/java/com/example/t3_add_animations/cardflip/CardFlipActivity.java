@@ -3,7 +3,7 @@ package com.example.t3_add_animations.cardflip;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.Menu;
 import android.view.MenuItem;
 

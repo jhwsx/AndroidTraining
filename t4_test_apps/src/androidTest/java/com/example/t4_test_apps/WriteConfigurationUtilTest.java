@@ -1,8 +1,8 @@
 package com.example.t4_test_apps;
 
 import android.content.Context;
-import android.support.test.filters.RequiresDevice;
-import android.support.test.filters.SmallTest;
+import androidx.test.filters.RequiresDevice;
+import androidx.test.filters.SmallTest;
 
 import org.junit.Rule;
 import org.junit.Test;

@@ -2,7 +2,7 @@ package com.wzc.displaybitmapdemo;
 
 import android.app.ListActivity;
 import android.os.Bundle;
-import android.support.annotation.IdRes;
+import androidx.annotation.IdRes;
 import android.widget.RadioGroup;
 
 public class MainActivity extends ListActivity implements RadioGroup.OnCheckedChangeListener {

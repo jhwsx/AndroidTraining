@@ -1,7 +1,7 @@
 package com.wzc.g4_fragment;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
              @Override
              public void onClick(View v) {
                  startActivity(new Intent(MainActivity.this, FragmentTransactionActivity.class));
+             }
+         });
+         findViewById(R.id.btn_pop_back_stack).setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 startActivity(new Intent(MainActivity.this, PopBackStackActivity.class));
              }
          });
     }

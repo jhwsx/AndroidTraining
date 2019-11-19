@@ -1,9 +1,9 @@
 package com.wzc.t21_using_touch_gestures;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.MotionEventCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.core.view.MotionEventCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 
