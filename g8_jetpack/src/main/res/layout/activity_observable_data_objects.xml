@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="person"
+            type="com.jetpack.demos.databinding.Person" />
+
+        <import type="androidx.databinding.ObservableMap" />
+
+        <import type="androidx.databinding.ObservableList" />
+
+        <import type="com.jetpack.demos.databinding.KeyConstants" />
+
+        <import type="com.jetpack.demos.databinding.IndexConstants" />
+
+        <variable
+            name="user"
+            type="ObservableMap&lt;String,Object>" />
+
+        <variable
+            name="company"
+            type="ObservableList&lt;Object>" />
+        <variable
+            name="human"
+            type="com.jetpack.demos.databinding.Human" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{person.firstName}" />
+
+        <TextView
+            android:id="@+id/tv_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{person.lastName}" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(person.age)}" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(user[KeyConstants.KEY_FIRST_NAME]) + user[KeyConstants.KEY_LAST_NAME] + user[KeyConstants.KEY_AGE]}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(company[IndexConstants.INDEX_FIRST_NAME]) + company[IndexConstants.INDEX_LAST_NAME]}" />
+
+        <TextView
+            android:text="@{human.firstName + human.lastName}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

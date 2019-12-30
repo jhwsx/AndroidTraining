@@ -24,10 +24,22 @@ public class DatabindingActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityDatabindingBinding databinding = DataBindingUtil.setContentView(this, R.layout.activity_databinding);
-        databinding.buttonDatabindingInclude.setOnClickListener(new View.OnClickListener() {
+        databinding.button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabindingIncludeActivity.start(DatabindingActivity.this);
+                LayoutsBindingExpressionsActivity.start(DatabindingActivity.this);
+            }
+        });
+        databinding.button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ObservableDataObjectsActivity.start(DatabindingActivity.this);
+            }
+        });
+        databinding.button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GenerateBindingActivity.start(DatabindingActivity.this);
             }
         });
     }
