@@ -1,6 +1,8 @@
 package com.wzc.g4_fragment;
 
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,9 +24,16 @@ public class ArticleActivity extends AppCompatActivity {
             finish();
             return;
         }
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .setReorderingAllowed(true)
+                    .add(android.R.id.content, ArticleFragment.newInstance(mHeadline))
+                    .commit();
+        }
+    }
 
-        getSupportFragmentManager().beginTransaction()
-                .add(android.R.id.content, ArticleFragment.newInstance(mHeadline))
-                .commit();
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
     }
 }

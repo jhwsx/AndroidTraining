@@ -40,9 +40,7 @@ public class ArticleFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mHeadline = getArguments().getString(ARGS_HEADLINE);
-        }
+        mHeadline = requireArguments().getString(ARGS_HEADLINE);
     }
 
     @Nullable

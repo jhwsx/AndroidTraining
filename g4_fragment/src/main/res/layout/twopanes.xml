@@ -12,7 +12,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.3"/>
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/headlines"
         android:name="com.wzc.g4_fragment.HeadlinesFragment"
         android:layout_width="0dp"
@@ -22,7 +22,7 @@
         app:layout_constraintRight_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/article"
         android:layout_width="0dp"
         android:layout_height="0dp"

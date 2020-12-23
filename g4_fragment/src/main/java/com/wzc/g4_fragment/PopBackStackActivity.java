@@ -10,10 +10,12 @@ public class PopBackStackActivity extends AppCompatActivity implements PopBackSt
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pop_back_stack);
-        FragmentManager fm = getSupportFragmentManager();
-        fm.beginTransaction()
-                .add(R.id.fl_container, FragmentA.newInstance())
-                .commit();
+        if (savedInstanceState == null) {
+            FragmentManager fm = getSupportFragmentManager();
+            fm.beginTransaction()
+                    .add(R.id.fl_container, FragmentA.newInstance())
+                    .commit();
+        }
     }
 
     @Override
@@ -38,13 +40,14 @@ public class PopBackStackActivity extends AppCompatActivity implements PopBackSt
         FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction()
                 .add(R.id.fl_container, FragmentD.newInstance())
-                .addToBackStack(null)
+                .addToBackStack("c")
                 .commit();
     }
 
     @Override
     public void onBackPressed() {
         getSupportFragmentManager().popBackStackImmediate("b", 0);
+//        getSupportFragmentManager().popBackStack();
         super.onBackPressed();
     }
 }

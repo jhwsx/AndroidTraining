@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/headlines"
         android:name="com.wzc.g4_fragment.HeadlinesFragment"
         android:layout_width="match_parent"
